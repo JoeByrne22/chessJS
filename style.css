@@ -1,5 +1,5 @@
 .board {
-    width: 270px;
+    width: 256px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -10,11 +10,6 @@
     height: 30px;
 }
 
-.board div:nth-child(odd) {
-    background: red;
-  }
-  
-  .board div:nth-child(even) {
-    background: blue;
-  }
-
+.light {
+    background-color: lightgreen;
+}
