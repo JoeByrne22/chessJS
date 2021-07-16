@@ -5,8 +5,17 @@ $( document ).ready(function() {
     $('[piece]').each(function() {
         let player = $(this).attr('player');
         let piece = $(this).attr('piece');
+        
+        if (piece == '' || player == '' ) {
+            $(this).attr('empty', 'true');
+            $(this).removeAttr('player');
+            $(this).removeAttr('piece');
 
+            console.log('$(this) empty', $(this));
+            return
+        }
         console.log($(this));
+        $(this).attr('empty', 'false');
         backgroundColour = $(this).css('background-color')
         $(this).css("background" , "url(./pieces/" + player + "/" + piece + ".svg)").css("background-color", backgroundColour);
 
