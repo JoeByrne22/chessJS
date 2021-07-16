@@ -6,6 +6,7 @@ $( document ).ready(function() {
         let player = $(this).attr('player');
         let piece = $(this).attr('piece');
 
+        console.log($(this));
         backgroundColour = $(this).css('background-color')
         $(this).css("background" , "url(./pieces/" + player + "/" + piece + ".svg)").css("background-color", backgroundColour);
 
