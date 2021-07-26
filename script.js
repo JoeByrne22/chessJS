@@ -13,7 +13,7 @@ $( document ).ready(function() {
             $(this).removeAttr('player');
             $(this).removeAttr('piece');
 
-            // console.log('$(this) empty', $(this));
+            console.log('$(this) empty', $(this));
             return
         }
         // console.log($(this));
@@ -27,7 +27,26 @@ $( document ).ready(function() {
     })
 
     $('[empty]').on('click', function() {
-        console.log('playerTurn', playerTurn);
+        // console.log('playerTurn', playerTurn);
+
+        targetplayer = $(this).attr('player');
+        targetPiece = $(this).attr('piece');
+
+        // console.log('targetplayer', targetplayer);
+        // console.log('targetPiece', targetPiece);
+
+            $("[empty='false']").each(function() {   //reset colour
+                if($(this).hasClass('light')) {
+                    var bgColour = 'white'
+                } 
+                else {
+                    var bgColour = 'grey'
+                }
+                $(this).css("background-color", bgColour);
+            })
+
+        $(this).css("background-color", 'green');
+
     });
 
 });
