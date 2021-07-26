@@ -2,6 +2,8 @@
 
 $( document ).ready(function() {
 
+    playerTurn = 'white';
+
     $('[piece]').each(function() {
         let player = $(this).attr('player');
         let piece = $(this).attr('piece');
@@ -11,10 +13,10 @@ $( document ).ready(function() {
             $(this).removeAttr('player');
             $(this).removeAttr('piece');
 
-            console.log('$(this) empty', $(this));
+            // console.log('$(this) empty', $(this));
             return
         }
-        console.log($(this));
+        // console.log($(this));
         $(this).attr('empty', 'false');
         backgroundColour = $(this).css('background-color')
         $(this).css("background" , "url(./pieces/" + player + "/" + piece + ".svg)").css("background-color", backgroundColour);
@@ -23,6 +25,10 @@ $( document ).ready(function() {
         //     $(this).css("background-color" , "grey");
         // }
     })
+
+    $('[empty]').on('click', function() {
+        console.log('playerTurn', playerTurn);
+    });
 
 });
 
