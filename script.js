@@ -32,8 +32,8 @@ $( document ).ready(function() {
         targetplayer = $(this).attr('player');
         targetPiece = $(this).attr('piece');
 
-        // console.log('targetplayer', targetplayer);
-        // console.log('targetPiece', targetPiece);
+        console.log('targetplayer', targetplayer);
+        console.log('targetPiece', targetPiece);
 
             $("[empty='false']").each(function() {   //reset colour
                 if($(this).hasClass('light')) {
