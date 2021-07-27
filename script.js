@@ -35,6 +35,8 @@ $( document ).ready(function() {
         console.log('targetplayer', targetplayer);
         console.log('targetPiece', targetPiece);
 
+        
+
             $("[empty='false']").each(function() {   //reset colour
                 if($(this).hasClass('light')) {
                     var bgColour = 'white'
@@ -44,7 +46,6 @@ $( document ).ready(function() {
                 }
                 $(this).css("background-color", bgColour);
             })
-
         $(this).css("background-color", 'green');
 
     });
