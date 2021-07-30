@@ -32,18 +32,22 @@ $( document ).ready(function() {
         targetplayer = $(this).attr('player');
         targetPiece = $(this).attr('piece');
 
-        console.log('targetplayer', targetplayer);
-        console.log('targetPiece', targetPiece);
+        // console.log('targetplayer', targetplayer);
+        // console.log('targetPiece', targetPiece);
 
-        console.log('this is the eidtted');
-        
-            $("[empty='false']").each(function() {   //reset colour
+        // console.log('this is the eidtted');
+
+            $("[empty]").each(function() {   //reset colour
                 if($(this).hasClass('light')) {
                     var bgColour = 'white'
+                    console.log('white is running');
                 } 
                 else {
                     var bgColour = 'grey'
+                    console.log('grey is running');
                 }
+
+                console.log('green is running');
                 $(this).css("background-color", bgColour);
             })
         $(this).css("background-color", 'green');
