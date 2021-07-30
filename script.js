@@ -35,8 +35,8 @@ $( document ).ready(function() {
         console.log('targetplayer', targetplayer);
         console.log('targetPiece', targetPiece);
 
+        console.log('this is the eidtted');
         
-
             $("[empty='false']").each(function() {   //reset colour
                 if($(this).hasClass('light')) {
                     var bgColour = 'white'
