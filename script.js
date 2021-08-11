@@ -31,23 +31,21 @@ $( document ).ready(function() {
 
         targetplayer = $(this).attr('player');
         targetPiece = $(this).attr('piece');
+        targetRow = $(this).attr('row');
+        targetColumn = $(this).attr('column');
 
-        // console.log('targetplayer', targetplayer);
-        // console.log('targetPiece', targetPiece);
-
-        // console.log('this is the eidtted');
+        console.log('targetplayer', targetplayer);
+        console.log('targetPiece', targetPiece);
+        console.log('targetRow', targetRow);
+        // console.log('targetColumn', targetColumn);
 
             $("[empty]").each(function() {   //reset colour
                 if($(this).hasClass('light')) {
                     var bgColour = 'white'
-                    console.log('white is running');
                 } 
                 else {
                     var bgColour = 'grey'
-                    console.log('grey is running');
                 }
-
-                console.log('green is running');
                 $(this).css("background-color", bgColour);
             })
         $(this).css("background-color", 'green');
