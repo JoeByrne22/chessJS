@@ -13,6 +13,7 @@ $( document ).ready(function() {
             $(this).removeAttr('player');
             $(this).removeAttr('piece');
 
+            
             console.log('$(this) empty', $(this));
             return
         }
