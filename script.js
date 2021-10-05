@@ -2,6 +2,7 @@
 
 $( document ).ready(function() {
 
+    var selection = {peice:'', player:'', row:'', column:''};
     playerTurn = 'white';
 
     $('[piece]').each(function() {
@@ -13,7 +14,7 @@ $( document ).ready(function() {
             $(this).removeAttr('player');
             $(this).removeAttr('piece');
 
-            
+
             console.log('$(this) empty', $(this));
             return
         }
@@ -38,7 +39,8 @@ $( document ).ready(function() {
         console.log('targetplayer', targetplayer);
         console.log('targetPiece', targetPiece);
         console.log('targetRow', targetRow);
-        // console.log('targetColumn', targetColumn);
+        console.log('targetColumn', targetColumn);
+        console.log('break')
 
             $("[empty]").each(function() {   //reset colour
                 if($(this).hasClass('light')) {
@@ -51,6 +53,8 @@ $( document ).ready(function() {
             })
         $(this).css("background-color", 'green');
 
+        selection = {peice:targetPiece, player:targetplayer, row:targetRow, column:targetColumn};
+        console.log('selection', selection)
         
     });
 
