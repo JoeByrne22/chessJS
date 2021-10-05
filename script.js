@@ -53,5 +53,10 @@ $( document ).ready(function() {
     });
 
     correctMove(selection.player, selection.piece, selection.row, selection.column, targRow, targColumn, targPeice, targPlayer);
+
+
+    function correctMove(player, peice, row, colunm, targRow, targColumn, targPeice, targPlayer) {
+        console.log('fucntion', player, peice, row, colunm, targRow, targColumn, targPeice, targPlayer)
+    }
 });
 
