@@ -36,12 +36,6 @@ $( document ).ready(function() {
         targetRow = $(this).attr('row');
         targetColumn = $(this).attr('column');
 
-        console.log('targetplayer', targetplayer);
-        console.log('targetPiece', targetPiece);
-        console.log('targetRow', targetRow);
-        console.log('targetColumn', targetColumn);
-        console.log('break')
-
             $("[empty]").each(function() {   //reset colour
                 if($(this).hasClass('light')) {
                     var bgColour = 'white'
@@ -58,5 +52,6 @@ $( document ).ready(function() {
         
     });
 
+    correctMove(selection.player, selection.piece, selection.row, selection.column, targRow, targColumn, targPeice, targPlayer);
 });
 
